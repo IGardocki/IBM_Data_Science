@@ -1,0 +1,1 @@
+The first course, What Is Data Science?, was just an intro course and did not contain any programming exercises.
