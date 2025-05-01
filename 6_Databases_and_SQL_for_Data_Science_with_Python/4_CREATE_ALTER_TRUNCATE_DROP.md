@@ -1,0 +1,1 @@
+this lab involved using a php admin site to run commands. Similar to pdadmin, but for php.
