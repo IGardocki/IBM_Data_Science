@@ -30,3 +30,11 @@ MIN_SALARY, MAX_SALARY
 FROM EMPLOYEES, JOBS
 WHERE EMPLOYEES.JOB_ID = JOBS.JOB_IDENT;
 ```
+
+NOTE: The technique used here to combine data from two tables is called implicit inner join. You will learn more about joins later on. For now, just assume you are combining the data of two different tables, EMPLOYEES and JOBS by connecting their respective columns JOB_ID and JOB_IDENT, since both the columns contain common unique data. You can have a look at the database description, shared at the beginning of the lab, to verify this.
+
+Using SELECT, query the updated EMPSALARY view to retrieve all the records. Copy the code below and paste it to the textarea of the SQL page. Click Go.
+
+```sql
+SELECT * FROM EMPSALARY;
+```
