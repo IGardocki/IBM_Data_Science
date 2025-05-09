@@ -38,3 +38,50 @@ Using SELECT, query the updated EMPSALARY view to retrieve all the records. Copy
 ```sql
 SELECT * FROM EMPSALARY;
 ```
+
+# Task 3: Drop a View
+
+In this exercise, you will drop the created View EMPSALARY.
+
+1. Use the code below.
+
+```sql
+DROP VIEW EMPSALARY;
+```
+
+2. Using SELECT, you can verify whether the EMPSALARY view has been deleted or not. Copy the code below and paste it to the textarea of the SQL page. Click Go.
+
+```sql
+SELECT * FROM EMPSALARY;
+```
+
+# Practice Problems
+
+Try to solve the following practice problems based on your learning in this lab.
+
+1. Create a view “EMP_DEPT” which has the following information.
+   EMP_ID, FNAME, LNAME and DEP_ID from EMPLOYEES table.
+
+```sql
+CREATE VIEW EMP_DATA AS
+SELECT EMP_ID, F_NAME, L_NAME, DEP_ID
+FROM EMPLOYEES;
+```
+
+2. Modify “EMP_DEPT” such that it displays Department names instead of Department IDs. For this, we need to combine information from EMPLOYEES and DEPARTMENTS as follows.
+
+EMP_ID, FNAME, LNAME from EMPLOYEES table and
+DEP_NAME from DEPARTMENTS table, combined over the columns DEP_ID and DEPT_ID_DEP.
+
+```sql
+CREATE OR REPLACE VIEW EMP_DEPT AS
+SELECT EMP_ID, F_NAME, L_NAME, DEP_NAME
+FROM EMPLOYEES, DEPARTMENTS
+WHERE EMPLOYEES.DEP_ID = DEPARTMENTS.DEPT_ID_DEP;
+```
+
+3. Drop the view “EPM_DEPT”.
+
+```sql
+DROP VIEW EMP_DEPT;
+```
